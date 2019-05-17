@@ -1,0 +1,40 @@
+<idea-plugin>
+    <id>com.zhiyuan</id>
+    <name>POJO to JSON</name>
+    <version>1.0</version>
+    <vendor >致远</vendor>
+
+    <description><![CDATA[
+      选中类-右键-MakeJson 将简单Java类型转成JSON<br>
+      方便用postman或者curl的时候构造JSON body<br>
+<br>
+      Convert POJO to JSON, easy to construct JSON body when you want posting a request throw Postman or curl-command.<br>
+<br>
+      Select a class in editor, right click and choose [MakeJson], enjoy it.<br>
+<br>
+       Please email me when you find any bug.
+      <em>d=====(￣▽￣*)b</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="BMPOJOtoJson.Convert2" class="ConvertAction" text="MakeJson" description="Convert to JSON">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift meta alt J"/>
+        </action>
+    </actions>
+
+</idea-plugin>
